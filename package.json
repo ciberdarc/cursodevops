@@ -1,0 +1,16 @@
+{
+  "name": "cursodevops",
+  "version": "1.0.0",
+  "description": "Ejemplo",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "alexisraujo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
+  }
+}
