@@ -18,6 +18,7 @@ jobs:
 
     steps:
       - checkout
+      - run: docker build -t platzi
 
       # Download and cache dependencies
       - restore_cache:
