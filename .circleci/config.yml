@@ -37,7 +37,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command:  ./deployments/qa.sh
+          command:  sh deployments/qa.sh
 
 workflows:
       version: 2
@@ -49,4 +49,5 @@ workflows:
                 - build-job
               filters:
                 branches:
-                  only: master
+                  only:
+                    - /feature_.*/
