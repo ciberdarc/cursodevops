@@ -38,6 +38,14 @@ jobs:
       - checkout
       - run:
           command:  sh deployments/qa.sh
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
 workflows:
   version: 2
@@ -49,4 +57,4 @@ workflows:
             - build
           filters:
             branches:
-              only: /feature_.*/
+              only: master
