@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 app.get('/*', (req, res) => {
   return res.redirect('/')
 })
-
+// WTF is this
 module.exports = app
